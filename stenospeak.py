@@ -65,7 +65,7 @@ def main(args):
 
 	if args.the_end:
 		shuffle(ENDING_PHRASES)
-		say(ENDING_PHRASES[0], args.voice, args.rate)
+		say(ENDING_PHRASES[0], args.voice)
 
 
 if __name__ == '__main__':
