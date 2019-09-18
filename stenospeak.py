@@ -82,6 +82,7 @@ if __name__ == '__main__':
 	parser.add_argument('--max_length', type=int, help="Max length of word")
 	parser.add_argument('--min_length', type=int, help="Min length of word")
 	parser.add_argument('--the_end', default=False, action="store_true", help="Announce the end of the list")
+	parser.add_argument('-I', '--initial_delay', type=int, help="Delay start for N seconds")
 	args = parser.parse_args()
 
 	if not isfile(SAY_CMD):
@@ -91,5 +92,8 @@ if __name__ == '__main__':
 	if not isfile(args.dict_file):
 		print("Uh oh, can't find dictionary file at {}".format(args.dict_file))
 		exit(1)
+
+	if args.initial_delay:
+		sleep(args.initial_delay)
 
 	main(args)
