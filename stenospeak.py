@@ -73,7 +73,7 @@ if __name__ == '__main__':
 
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-D', '--dict_file', help="Dictionary file to use (default: {})".format(DEFAULT_DICT_FILE), default=DEFAULT_DICT_FILE)
-	parser.add_argument('-d', '--delay', default=DEFAULT_DELAY, type=int, help="Seconds of delay between words (default: {})".format(DEFAULT_DELAY))
+	parser.add_argument('-d', '--delay', default=DEFAULT_DELAY, type=float, help="Seconds of delay between words (default: {})".format(DEFAULT_DELAY))
 	parser.add_argument('-l', '--limit', help="Limit to N words (default is all of them)", type=int)
 	parser.add_argument('--in_order', default=False, help='Play dictionary in order (default is to randomize)', action='store_true')
 	parser.add_argument('-v', '--voice', help="Specify the voice to use (type 'say --voice ?') to see your options")
